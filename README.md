@@ -2,12 +2,14 @@ Two chunks `chunk1.js` and `chunk2.js`.
 
 Each importing a function of lodash using the package index.js
 
-`import { join } from 'lodash';`
+(this only works with es modules!)
 
-`import { last } from 'lodash';`
+`import { join } from 'lodash-es';`
 
-Before the option `sideEffects` existed we would expect the complete content of `lodash` to be imported as a single module and not split in the different chunk.
-So the recommendation was `import join from 'lodash/join';` to import each module separately.
+`import { last } from 'lodash-es';`
+
+Before the option `sideEffects` existed we would expect the complete content of `lodash-es` to be imported as a single module and not split in the different chunk.
+So the recommendation was `import join from 'lodash-es/join';` to import each module separately.
 
 That's the result of `npm run build-sideEffect` and `/dist-side-effect`.
 
