@@ -1,6 +1,5 @@
 const webpack = require("webpack");
 const path = require("path");
-var ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = () => {
   return {
